@@ -30,8 +30,7 @@ function Chat({ chat, messages }) {
 
   return (
     <>
-      This is Chat Page
-      {/* <Head>
+      <Head>
         <title>Whatsapp Clone</title>
         <link rel="icon" href="/Whatsapp.png" />
       </Head>
@@ -95,7 +94,7 @@ function Chat({ chat, messages }) {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }
