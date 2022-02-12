@@ -4,7 +4,6 @@ import Auth from "./auth";
 import { auth, db } from "../firebase";
 import firebase from "firebase/compat/app";
 import Loading from "../components/Loading";
-
 import { useEffect } from "react";
 import { RecoilRoot } from "recoil";
 
