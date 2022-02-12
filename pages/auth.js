@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import Head from "next/head";
 import { useRef, useState } from "react";
 import { auth, provider } from "../firebase";

@@ -14,17 +14,14 @@ function Chat({ id, users }) {
   const [isSidebarOpen, setIsSidebarOpen] = useRecoilState(sidebarState);
   const router = useRouter();
   const [user] = useAuthState(auth);
-  const [recipientSnapshot] = useCollection(
-    db.collection("users").where("email", "==", getRecipientEmail(users, user))
-  );
 
-  const recipient = recipientSnapshot?.docs?.[0]?.data();
   const recipientEmail = getRecipientEmail(users, user);
 
   // when clicked on an user this function will be called
   const enterChat = () => {
-    // router.push(`/chat/${id}`);
-    router.push(`/try`);
+    router.push(`/chat/${id}`);
+    console.log("push to id page");
+    // router.push(`/try`);
     setIsSidebarOpen(false);
   };
 
