@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { TailSpin } from "react-loader-spinner";
 
 function Loading() {
   return (
@@ -9,7 +8,10 @@ function Loading() {
         <link rel="icon" href="/Whatsapp.png" />
       </Head>
       <div className="bg-[#111b21] text-white h-screen w-full grid place-items-center">
-        <TailSpin color="#22c55e" height={80} width={80} />
+        {/* <TailSpin color="#22c55e" height={80} width={80} /> */}
+        <div class="border-[#22c55e] animate-spin inline-block w-[50px] h-[50px] border-4 rounded-full">
+          <div class="text-[#111b21] rounded-full bg-[#111b21] w-[30px] h-[20px]  rotate-45 "></div>
+        </div>
       </div>
     </>
   );
