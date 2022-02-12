@@ -17,7 +17,7 @@ function Auth() {
   const [signUpErrorMessage, setSignUpErrorMessage] = useState("");
   const [loginErrorMessage, setLoginErrorMessage] = useState("");
 
-  //   Signin and signout handlers
+  //   Signin and SignUp handlers
   const signInHandler = (e) => {
     e.preventDefault();
     auth

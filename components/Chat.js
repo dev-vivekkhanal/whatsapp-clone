@@ -23,8 +23,9 @@ function Chat({ id, users }) {
 
   // when clicked on an user this function will be called
   const enterChat = () => {
-    router.push(`/chat/${id}`);
-    // setIsSidebarOpen(false);
+    // router.push(`/chat/${id}`);
+    router.push(`/try`);
+    setIsSidebarOpen(false);
   };
 
   const [messagesSnapshot] = useCollection(
