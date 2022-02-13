@@ -61,22 +61,18 @@ function Chat({ id, users }) {
       />
       <div className="w-full  py-5 pr-3 border-b-2 border-gray-800">
         <div className="flex justify-between items-center">
-          <h1 className="text-gray-100 text-lg font-light capitalize">
+          <h1 className="text-gray-100 text-lg  capitalize">
             {recipientEmail.substring(0, recipientEmail.lastIndexOf("@"))}
           </h1>
           <p className="text-xs lowercase font-light ml-2">
             {formatedLastTimeStamp}
           </p>
         </div>
-        <p className="text-sm font-light xl:hidden">
-          {truncate(lastMessage, 29)}
-        </p>
-        <p className="text-sm font-light hidden xl:block 2xl:hidden ">
+        <p className="text-sm  xl:hidden">{truncate(lastMessage, 29)}</p>
+        <p className="text-sm  hidden xl:block 2xl:hidden ">
           {truncate(lastMessage, 40)}
         </p>
-        <p className="text-sm font-light hidden 2xl:block">
-          {truncate(lastMessage, 50)}
-        </p>
+        <p className="text-sm  hidden 2xl:block">{truncate(lastMessage, 50)}</p>
       </div>
     </div>
   );

@@ -28,6 +28,11 @@ function Chat({ chat, messages }) {
   const recipient = recipientSnapshot?.docs?.[0]?.data();
   const recipientEmail = getRecipientEmail(chat.users, user);
 
+  //   truncating string if it contains more then desired no. of characters
+  function truncate(string, n) {
+    return string?.length > n ? string.substr(0, n - 1) + ". . ." : string;
+  }
+
   return (
     <>
       <Head>
@@ -53,6 +58,7 @@ function Chat({ chat, messages }) {
               <ArrowBackIcon
                 fontSize="small"
                 onClick={() => setIsSidebarOpen(true)}
+                className="sm:invisible sm:text-red-500"
               />
               <Avatar
                 {...stringAvatar(recipientEmail)}
@@ -60,7 +66,7 @@ function Chat({ chat, messages }) {
               />
               <div className="w-full">
                 <h1 className="text-base md:text-lg text-gray-100">
-                  {recipientEmail}
+                  {truncate(recipientEmail, 20)}
                 </h1>
                 {recipientSnapshot ? (
                   <p className="text-xs">
@@ -80,10 +86,16 @@ function Chat({ chat, messages }) {
               </div>
               <div className="justify-self-end flex">
                 <IconButton aria-label="contacts">
-                  <SearchIcon className="text-gray-400 active:text-gray-300 transition-all" />
+                  <SearchIcon
+                    fontSize="small"
+                    className="text-gray-400 active:text-gray-300 transition-all"
+                  />
                 </IconButton>
                 <IconButton aria-label="options">
-                  <MoreVertIcon className="text-gray-400 active:text-gray-300 transition-all" />
+                  <MoreVertIcon
+                    fontSize="small"
+                    className="text-gray-400 active:text-gray-300 transition-all"
+                  />
                 </IconButton>
               </div>
             </div>

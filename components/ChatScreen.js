@@ -73,25 +73,37 @@ function ChatScreen({ chat, messages }) {
     <>
       <div className="h-[90%] overflow-y-scroll scrollbar-hide pt-5">
         {showMessages()}
-        <div ref={endOfMessagesRef} className="h-[100px] w-[10px]"></div>
+        <div ref={endOfMessagesRef} className="h-[100px] w-[10px] "></div>
       </div>
       <div className="h-[10%] flex items-end">
-        <form className="space-x-5 p-3 bg-[#202c33] w-full flex items-center z-50  bottom-0 ">
-          <InsertEmoticonIcon className="text-gray-400 cursor-pointer" />
-          <AttachFileIcon className="text-gray-400 rotate-45 cursor-pointer " />
+        <form className=" space-x-2 sm:space-x-5 p-3 bg-[#202c33] w-full flex items-center z-50  bottom-0 ">
+          <InsertEmoticonIcon
+            fontSize="small"
+            className="text-gray-400 cursor-pointer"
+          />
+          <AttachFileIcon
+            fontSize="small"
+            className="text-gray-400 rotate-45 cursor-pointer "
+          />
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             type="text"
             placeholder="Type a message"
-            className="text-base p-2 px-4 rounded-md flex-1 outline-none border-0 bg-[#2a3942]"
+            className="text-base p-2 sm:px-4 rounded-md flex-1 outline-none border-0 bg-[#2a3942]"
           />
           {input ? (
             <button disabled={!input} type="submit" onClick={sendMessage}>
-              <SendIcon className="text-gray-400 cursor-pointer" />
+              <SendIcon
+                fontSize="small"
+                className="text-gray-400 cursor-pointer"
+              />
             </button>
           ) : (
-            <MicIcon className="text-gray-400 cursor-pointer" />
+            <MicIcon
+              fontSize="small"
+              className="text-gray-400 cursor-pointer"
+            />
           )}
         </form>
       </div>

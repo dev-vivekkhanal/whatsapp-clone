@@ -4,7 +4,7 @@ import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 
 export default function Home() {
   return (
-    <div className="bg-[#0a1014]">
+    <div className="bg-[#140d0a]">
       <Head>
         <title>Whatsapp Clone</title>
         <meta
