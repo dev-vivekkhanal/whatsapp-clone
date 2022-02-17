@@ -13,7 +13,7 @@ function Message({ user, message }) {
   return (
     <div className="w-[90%] mx-auto ">
       <div
-        className={`text-base   max-w-[50%] min-w-[10%] w-fit my-1 rounded-md ${TypeOfMessage} `}
+        className={`text-xs sm:text-base   max-w-[50%] min-w-[10%] w-fit my-1 rounded-md ${TypeOfMessage} `}
       >
         <p className="p-2 pb-0 ">{message.message}</p>
 
